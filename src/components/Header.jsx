@@ -6,7 +6,10 @@ export default function Header() {
   return (
     <>
       <div className="navbar">
-        <h2 className="brand">BottleHut</h2>
+        <div className="logo-brand">
+          <img src="../../public/logo.jpg" alt="" className="logo" />
+          <h2 className="brand">Bottle Hut</h2>
+        </div>
         <div className="icons">
           <div className="icon-div">
             <AiOutlineShoppingCart />

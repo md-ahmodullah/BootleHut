@@ -1,6 +1,16 @@
 .brand {
   font-size: 32px;
 }
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .navbar {
   display: flex;
   align-items: center;

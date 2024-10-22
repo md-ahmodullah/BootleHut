@@ -24,7 +24,7 @@ export default function Cards() {
 
   return (
     <>
-      <h2 className="title">Memorable Water Bottle</h2>
+      <h3 className="title">Memorable Water Bottle</h3>
       <div className="cart-card">
         <h2>All Bottles : {bottles.length}</h2>
         <div className="icon-div">
