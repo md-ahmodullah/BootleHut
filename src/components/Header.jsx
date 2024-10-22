@@ -7,7 +7,7 @@ export default function Header() {
     <>
       <div className="navbar">
         <div className="logo-brand">
-          <img src="../../public/logo.jpg" alt="" className="logo" />
+          <img src="../assets/logo.jpg" alt="" className="logo" />
           <h2 className="brand">Bottle Hut</h2>
         </div>
         <div className="icons">
