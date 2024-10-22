@@ -1,18 +1,29 @@
 import "./Card.css";
-export default function Card() {
+import Five from "./ratings/Five";
+import Four from "./ratings/Four";
+import Three from "./ratings/Three";
+export default function Card({ bottle }) {
   return (
     <>
       <div className="card">
-        <img src="" alt="" />
-        <h3>Name : </h3>
-        <p>Price : </p>
-        <p>Available : </p>
-
+        <img src={bottle.img} alt={bottle.name} />
+        <h3>{bottle.name}</h3>
+        <p>Price : ${bottle.price}</p>
+        <p>Available : {bottle.stock}</p>
+        <p>Seller : {bottle.seller}</p>
         <div className="card-footer">
-          <p>Ratings : </p>
-          <p>Seller : </p>
+          <button className="btn">Buy Now</button>
+          <p>
+            {" "}
+            {bottle.ratings === 3 ? (
+              <Three />
+            ) : bottle.ratings === 4 ? (
+              <Four />
+            ) : (
+              <Five />
+            )}
+          </p>
         </div>
-        <button className="btn">Buy Now</button>
       </div>
     </>
   );
