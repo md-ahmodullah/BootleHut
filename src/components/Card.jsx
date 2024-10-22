@@ -6,7 +6,7 @@ export default function Card({ bottle, onBuyNow }) {
   return (
     <>
       <div className="card">
-        <img src={bottle.img} alt={bottle.name} />
+        <img src={bottle.img} alt={bottle.name} className="card-image" />
         <div></div>
         <h3>{bottle.name}</h3>
         <p>Price : ${bottle.price}</p>

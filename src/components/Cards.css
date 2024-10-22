@@ -3,6 +3,28 @@
   text-align: center;
 }
 
+.cart-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-icon {
+  font-size: 32px;
+}
+.icon-div {
+  position: relative;
+}
+.span {
+  background-color: green;
+  color: white;
+  padding: 1px 5px;
+  font-size: 14px;
+  font-family: 300;
+  border-radius: 30px;
+  position: absolute;
+  top: -9px;
+  right: -12px;
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -20,6 +42,11 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+}
+.buy-cross img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
 }
 .cross {
   font-size: 24px;
