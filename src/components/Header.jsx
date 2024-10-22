@@ -11,7 +11,7 @@ export default function Header() {
           <div className="icon-div">
             <AiOutlineShoppingCart />
             <span>
-              <sup className="span">0</sup>
+              <sup className="span">{0}</sup>
             </span>
           </div>
           <FaRegCircleUser />

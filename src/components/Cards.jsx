@@ -1,21 +1,41 @@
 import { useEffect, useState } from "react";
+import { FaXmark } from "react-icons/fa6";
 import Card from "./Card";
 import "./Cards.css";
+
 export default function Cards() {
   const [bottles, setBottles] = useState([]);
+  const [buyBottles, setBuyBottles] = useState([]);
   useEffect(() => {
     fetch("bootle.json")
       .then((res) => res.json())
       .then((data) => setBottles(data));
   }, []);
+
+  const handleClick = (bottle) => {
+    const newBottles = [...buyBottles, bottle];
+    setBuyBottles(newBottles);
+  };
+
+  const handleDelete = (bottle) => {
+    setBuyBottles(buyBottles.filter((b) => b.id !== bottle.id));
+  };
+
   return (
     <>
       <h2 className="title">Memorable Water Bottle</h2>
       <h2>All Bottles : {bottles.length}</h2>
-      <h3>Add to Cart : {0}</h3>
+      {buyBottles.map((bottle) => (
+        <div className="buy-bottles" key={bottle.id}>
+          <div className="buy-cross">
+            <p>{bottle.name}</p>
+            <FaXmark className="cross" onClick={() => handleDelete(bottle)} />
+          </div>
+        </div>
+      ))}
       <div className="cards">
         {bottles.map((bottle) => (
-          <Card key={bottle.id} bottle={bottle} />
+          <Card key={bottle.id} bottle={bottle} onBuyNow={handleClick} />
         ))}
       </div>
     </>

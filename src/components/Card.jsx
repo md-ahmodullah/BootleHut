@@ -2,7 +2,7 @@ import "./Card.css";
 import Five from "./ratings/Five";
 import Four from "./ratings/Four";
 import Three from "./ratings/Three";
-export default function Card({ bottle }) {
+export default function Card({ bottle, onBuyNow }) {
   return (
     <>
       <div className="card">
@@ -13,7 +13,9 @@ export default function Card({ bottle }) {
         <p>Available : {bottle.stock}</p>
         <p>Seller : {bottle.seller}</p>
         <div className="card-footer">
-          <button className="btn">Buy Now</button>
+          <button className="btn" onClick={() => onBuyNow(bottle)}>
+            Buy Now
+          </button>
           <span>
             {" "}
             {bottle.ratings === 3 ? (
