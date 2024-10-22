@@ -1,5 +1,6 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaRegCircleUser } from "react-icons/fa6";
+import { logo } from "../assets/logo.jpg";
 import "./Header.css";
 
 export default function Header() {
@@ -7,7 +8,7 @@ export default function Header() {
     <>
       <div className="navbar">
         <div className="logo-brand">
-          <img src="../assets/logo.jpg" alt="" className="logo" />
+          <img src={logo} alt="" className="logo" />
           <h2 className="brand">Bottle Hut</h2>
         </div>
         <div className="icons">
