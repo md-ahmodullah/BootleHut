@@ -1,3 +1,6 @@
+.brand {
+  font-size: 32px;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -8,4 +11,19 @@
   font-size: 30px;
   display: flex;
   gap: 20px;
+}
+.span {
+  background-color: green;
+  color: white;
+  padding: 1px 8px;
+  font-size: 16px;
+  font-family: 300;
+  border-radius: 30px;
+  position: absolute;
+  top: -6px;
+  right: -10px;
+}
+
+.icon-div {
+  position: relative;
 }

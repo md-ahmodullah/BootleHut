@@ -6,9 +6,14 @@ export default function Header() {
   return (
     <>
       <div className="navbar">
-        <h2>BottleHut</h2>
+        <h2 className="brand">BottleHut</h2>
         <div className="icons">
-          <AiOutlineShoppingCart />
+          <div className="icon-div">
+            <AiOutlineShoppingCart />
+            <span>
+              <sup className="span">0</sup>
+            </span>
+          </div>
           <FaRegCircleUser />
         </div>
       </div>
