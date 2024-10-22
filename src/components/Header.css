@@ -6,11 +6,6 @@
   height: 40px;
   border-radius: 50px;
 }
-.logo-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 .navbar {
   display: flex;
   align-items: center;
